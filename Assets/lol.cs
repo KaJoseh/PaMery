@@ -7,6 +7,7 @@ public class lol : MonoBehaviour
     SpriteRenderer xd;
     bool yolo;
     int xdxd;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,6 @@ public class lol : MonoBehaviour
         yolo = false;
         xdxd = 0;
         xd.flipY = false;
-
     }
 
     // Update is called once per frame
@@ -36,9 +36,6 @@ public class lol : MonoBehaviour
             xd.flipY = false;
             StartCoroutine(ekisda());
         }
-        
-            
-
     }
 
     IEnumerator ekisde()
@@ -60,8 +57,5 @@ public class lol : MonoBehaviour
         yield return new WaitForSeconds(1);
         xd.flipY = true;
         xdxd = 0;
-        
-
     }
-
 }
