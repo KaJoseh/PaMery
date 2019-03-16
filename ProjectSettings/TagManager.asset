@@ -10,6 +10,7 @@ TagManager:
   - Obs
   - name
   - score
+  - seteador
   layers:
   - Default
   - TransparentFX

@@ -2660,7 +2660,7 @@ GameObject:
   - component: {fileID: 1215682016}
   m_Layer: 5
   m_Name: Puntaje
-  m_TagString: name
+  m_TagString: score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2681,8 +2681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 34.041775, y: -21.786201}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 33.6, y: -19.199997}
+  m_SizeDelta: {x: 32.91, y: 9.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215682016
 MonoBehaviour:
@@ -2696,6 +2696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b402f9ac843e7b489ea46351fa1da2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntuacion: {fileID: 0}
 --- !u!114 &1215682017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2783,7 +2784,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 82.25254, y: 17.30366, z: 81.209404, w: 23.821518}
+  m_margin: {x: 0.2294564, y: 0.0889324, z: -0.13858968, w: -0.14407794}
   m_textInfo:
     textComponent: {fileID: 1215682017}
     characterCount: 1
@@ -2832,8 +2833,8 @@ GameObject:
   - component: {fileID: 1333768791}
   - component: {fileID: 1333768790}
   m_Layer: 0
-  m_Name: DataController
-  m_TagString: Untagged
+  m_Name: Seteador
+  m_TagString: seteador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2863,6 +2864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b402f9ac843e7b489ea46351fa1da2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntuacion: {fileID: 1215682017}
 --- !u!4 &1333768793
 Transform:
   m_ObjectHideFlags: 0

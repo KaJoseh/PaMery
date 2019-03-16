@@ -2,26 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Perder : MonoBehaviour
 {
     public GameObject gameOver;
     GameManager gm;
-
-    // Start is called before the first frame update
+    SetearPuntaje st;
+    
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        gameOver.SetActive(false);
         gm.Jugando = 0;
-
+        st = GameObject.FindGameObjectWithTag("seteador").GetComponent<SetearPuntaje>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (gm.Jugando.Equals(2))
         {
             gameObject.GetComponent<Animator>().SetBool("Muertesito", true);
+            Debug.Log(PlayerPrefs.GetInt("patata").ToString());
+            //gameOver.SetActive
+        }
+        else
+        {
+            gameOver.SetActive(false);
+            st.setScore();
         }
     }
 
@@ -33,12 +39,9 @@ public class Perder : MonoBehaviour
             gameOver.SetActive(true);
             if (gm.Puntos > gm.BestoPuntos)
             {
-                
+                gm.BestoPuntos = gm.Puntos;
                 PlayerPrefs.SetInt("patata", gm.BestoPuntos);
             }
-
-
         }
-
     }
 }
