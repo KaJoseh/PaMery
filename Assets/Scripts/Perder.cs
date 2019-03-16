@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Perder : MonoBehaviour
@@ -37,10 +38,11 @@ public class Perder : MonoBehaviour
         {
             gm.Jugando = 2;
             gameOver.SetActive(true);
-            if (gm.Puntos > gm.BestoPuntos)
+            gm.BestoPuntos = gm.Puntos;
+            if (gm.BestoPuntos > PlayerPrefs.GetInt("patata"))
             {
-                gm.BestoPuntos = gm.Puntos;
                 PlayerPrefs.SetInt("patata", gm.BestoPuntos);
+                //SceneManager.LoadScene("Felicidades", LoadSceneMode.Single);
             }
         }
     }
