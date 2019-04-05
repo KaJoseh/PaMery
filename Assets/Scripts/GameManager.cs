@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,20 @@ public class GameManager : MonoBehaviour
         set
         {
             bestoPuntos = value; 
+        }
+    }
+    
+    private string bestoName;
+    public string BestoName
+    {
+        get
+        {
+            return bestoName;
+        }
+
+        set
+        {
+            bestoName = value;
         }
     }
 
@@ -45,7 +60,7 @@ public class GameManager : MonoBehaviour
 
         set
         {
-            puntos = value; //:'v
+            puntos = value;
         }
     }
 

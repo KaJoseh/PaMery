@@ -11,6 +11,8 @@ TagManager:
   - name
   - score
   - seteador
+  - canvas
+  - boton
   layers:
   - Default
   - TransparentFX

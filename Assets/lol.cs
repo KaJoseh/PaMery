@@ -7,6 +7,7 @@ public class lol : MonoBehaviour
     SpriteRenderer xd;
     bool yolo;
     int xdxd;
+    float dogo;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +16,13 @@ public class lol : MonoBehaviour
         yolo = false;
         xdxd = 0;
         xd.flipY = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        this.gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, dogo * dogo));
         if (yolo == false)
         {
             StartCoroutine(ekisde());
@@ -35,6 +38,11 @@ public class lol : MonoBehaviour
         {
             xd.flipY = false;
             StartCoroutine(ekisda());
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            dogo += 1f;
         }
     }
 
