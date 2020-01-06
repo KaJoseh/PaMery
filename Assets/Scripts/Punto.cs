@@ -33,7 +33,7 @@ public class Punto : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        gm.Puntos = 24;
+        gm.Puntos++;
     }
 
 

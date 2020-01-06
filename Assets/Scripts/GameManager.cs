@@ -75,6 +75,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        if (PlayerPrefs.GetString("potato").ToString().Length == 0)
+        {
+            PlayerPrefs.SetString("potato", "Pamery's God");
+        }
     }
     
 

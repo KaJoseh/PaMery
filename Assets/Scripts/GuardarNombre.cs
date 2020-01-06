@@ -20,6 +20,7 @@ public class GuardarNombre : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
         if (nombre.text.ToUpper() == PlayerPrefs.GetString("potato").ToString().ToUpper() && nombre.text.Length > 0)
         {
             texto01.SetText("Ho ho, you again?");
