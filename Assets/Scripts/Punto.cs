@@ -5,8 +5,9 @@ using TMPro;
 
 public class Punto : MonoBehaviour
 {
+    [Header ("El GameObject de Texto Puntaje")]
     public GameObject pt;
-    public TextMeshProUGUI texto;
+    public TextMeshProUGUI textoPuntaje;
     public TextMeshProUGUI puntuacionFinal;
 
     //public GameObject puntuacion;
@@ -17,7 +18,6 @@ public class Punto : MonoBehaviour
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         gm.Puntos = 0;
-       
     }
 
     // Update is called once per frame
@@ -27,14 +27,13 @@ public class Punto : MonoBehaviour
             pt.SetActive(false);
 
         puntuacionFinal.SetText(gm.Puntos.ToString());
-        texto.SetText(gm.Puntos.ToString()); //Esta es la mala >:'v
-        //Debug.Log(gm.Puntos.ToString()); // diosito ayuda :'v
+        textoPuntaje.SetText(gm.Puntos.ToString()); 
+        //Debug.Log(gm.Puntos.ToString()); 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        gm.Puntos++;
-
+        gm.Puntos = 24;
     }
 
 

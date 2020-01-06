@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Perder : MonoBehaviour
 {
     public GameObject gameOver;
+    public GameObject botonVolver;
+
     GameManager gm;
     SetearPuntaje st;
     SetearNombre sn;
@@ -28,7 +30,7 @@ public class Perder : MonoBehaviour
         if (gm.Jugando.Equals(2))
         {
             gameObject.GetComponent<Animator>().SetBool("Muertesito", true);
-            Debug.Log(PlayerPrefs.GetInt("patata").ToString());
+            //Debug.Log(PlayerPrefs.GetInt("patata").ToString());
             sn.setName();
             //gameOver.SetActive
         }
@@ -47,18 +49,21 @@ public class Perder : MonoBehaviour
             gm.Jugando = 2;
             gameOver.SetActive(true);
             gm.BestoPuntos = gm.Puntos;
+
             if (gm.BestoPuntos > PlayerPrefs.GetInt("patata"))
             {
+                gameOver.gameObject.transform.GetChild(4).gameObject.SetActive(false);
                 PlayerPrefs.SetInt("patata", gm.BestoPuntos);
                 boton_back.SetActive(false);
                 StartCoroutine(cambiarEscena());
-                //SceneManager.LoadScene("Felicidades", LoadSceneMode.Single);
-            }
+            }  
         }
     }
+    
     IEnumerator cambiarEscena()
     {
         yield return new WaitForSeconds(2);
         cambiador.irAEscena("Felicidades");
     }
+    
 }

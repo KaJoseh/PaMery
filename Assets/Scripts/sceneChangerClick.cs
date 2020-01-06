@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class sceneChangerClick : MonoBehaviour {
 
-	public void irAEscena(string _escena){
-		StartCoroutine(OpenScene (_escena));
+
+	public void irAEscena(string _escena)
+	{
+			StartCoroutine(OpenScene(_escena));
 	}
 
 	private IEnumerator OpenScene ( string escena ) {
@@ -14,4 +16,5 @@ public class sceneChangerClick : MonoBehaviour {
 		yield return new WaitForSeconds (fadeTime);
 		SceneManager.LoadScene (escena);
 	}
+
 }

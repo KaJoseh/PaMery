@@ -19,7 +19,7 @@ public class CambiarEscenaGM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gm.Jugando.Equals(2))
+        if (gm.Jugando.Equals(2) && gm.BestoPuntos < PlayerPrefs.GetInt("patata"))
         {
             StartCoroutine(esperar());
         }
